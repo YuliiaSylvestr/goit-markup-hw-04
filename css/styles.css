@@ -420,20 +420,18 @@ body {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-five-list-item:hover .customers-icon {
+.section-five-list-item-icon-cont:hover .customers-icon,
+.section-five-list-item-icon-cont:focus .customers-icon {
     fill: var(--pressed-state-color);
 }
 
-.section-five-list-item:hover .section-five-list-item-icon-cont,
-.section-five-list-item:focus .section-five-list-item-icon-cont {
-    border: 1px solid var(--pressed-state-color);
+.section-five-list-item-icon-cont:hover,
+.section-five-list-item-icon-cont:focus {
+    border-color: var(--pressed-state-color);
 }
 
 /* ====== MODAL ====== */
 .modal-backdrop {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     position: fixed;
     top: 0;
     right: 0;
@@ -450,7 +448,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-
     width: 408px;
     min-height: 584px;
     border-radius: 4px;
@@ -563,6 +560,7 @@ body {
 
 .footer-icon-cont:hover,
 .footer-icon-cont:focus {
+    border: none;
     background-color: var(--success-color);
 }
 
@@ -639,7 +637,8 @@ body {
     overflow: hidden;
 }
 
-.portfolio-cards-link:hover .portfolio-cards-backdrop {
+.portfolio-cards-link:hover .portfolio-cards-backdrop,
+.portfolio-cards-link:focus .portfolio-cards-backdrop {
     transform: translateY(0);
 }
 
